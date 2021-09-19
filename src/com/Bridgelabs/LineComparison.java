@@ -45,10 +45,29 @@ public class LineComparison {
 		System.out.println("Distance between: " +"(" + c1 + "," + d1 + ")," + "(" + c2 + "," + d2 + ")===>" + distance2 );
 		System.out.println();
 		
+		//equals method
 		if(distance1 == distance2)
 			System.out.println("Both distance1 and distance2 are equal");
 		else
 			System.out.println("Both distances are not equal");
+		
+		
+		compareTo ( distance1, distance2);
+		
+	}		
+		
+		
+	private static void compareTo(double distance1, double distance2) {
+		System.out.println();
+		if(distance1 > distance2)
+			System.out.println("distance1 is greater than distance2");
+		else if (distance1 < distance2)
+			System.out.println("distance1 is smaller than distance2");
+		else 
+			System.out.println("Both distances are equal");
 	}
-
+		
+	
 }
+
+
