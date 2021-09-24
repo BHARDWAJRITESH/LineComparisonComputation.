@@ -3,71 +3,51 @@ package com.Bridgelabs;
 import java.util.Scanner;
 
 public class LineComparison {
-
-	public static void main(String[] args) {
-		System.out.println("*****Welcome to the line comparison computation program*****");
-		
-		double a1, a2, b1, b2, c1, c2, d1, d2;
-		double distance1, distance2;
+		public int comparison() {
 			
-		Scanner line = new Scanner (System.in);
-		System.out.println("Enter a1 value: ");
-		a1 = line.nextInt();
+			double a1, a2, b2, b1;
+			double Distance;
 		
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Enter a1 point:");
+			a1=scan.nextInt();
+			
+			System.out.println("Enter a2 point:");
+			a2=scan.nextInt();
+			
+			System.out.println("Enter b1 point:");
+			b1=scan.nextInt();
+			
+			System.out.println("Enter b2 point:");
+			b2=scan.nextInt();
 		
-		System.out.println("Enter a2 value: ");
-		a2 = line.nextInt();
+			Distance = Math.sqrt((a2-a1) * (a2-a1) + (b2-b1) * (b2-b1));
+			System.out.println(" Distance between" + "(" + a1 + "," + b1 + ")," + "(" + a2 + "," + b2 + ")===>" + Distance);
 		
+			return (int) Distance;
 		
-		System.out.println("Enter b1 value: ");
-		b1 = line.nextInt();
-		
-		
-		System.out.println("Enter b2 value: ");
-		b2 = line.nextInt();
-		
-		System.out.println("Enter c1 value: ");
-		c1 = line.nextInt();
-		
-		System.out.println("Enter c2 value: ");
-		c2 = line.nextInt();
-		
-		System.out.println("Enter d1 value: ");
-		d1 = line.nextInt();
-		
-		System.out.println("Enter d2 value: ");
-		d2 = line.nextInt();
-		
-		distance1 = Math.sqrt( (a2-a1)*(a2-a1) + (b2-b1)*(b2-b1));
-		distance2 = Math.sqrt( (c2-c1)*(c2-c1) + (d2-d1)*(d2-d1));
-		
-		System.out.println("Distance between: " +"(" + a1 + "," + b1 + ")," + "(" + a2 + "," + b2 + ")===>" + distance1 );
-		System.out.println("Distance between: " +"(" + c1 + "," + d1 + ")," + "(" + c2 + "," + d2 + ")===>" + distance2 );
-		System.out.println();
-		
-		//equals method
-		if(distance1 == distance2)
-			System.out.println("Both distance1 and distance2 are equal");
-		else
-			System.out.println("Both distances are not equal");
-		
-		
-		compareTo ( distance1, distance2);
-		
-	}		
-		
-		
-	private static void compareTo(double distance1, double distance2) {
-		System.out.println();
-		if(distance1 > distance2)
-			System.out.println("distance1 is greater than distance2");
-		else if (distance1 < distance2)
-			System.out.println("distance1 is smaller than distance2");
-		else 
-			System.out.println("Both distances are equal");
-	}
-		
+		}
 	
+		public void equalsMethod ( double line1, double line2 ) {
+        
+			if (line1 == line2) {
+				System.out.println ( "Both lines are equals" );
+			} else {
+				System.out.println ( "Lines are not equals" );
+			}
+		}
+	
+		public void compareToMethod ( double line1, double line2 ) {
+			if (line1 < line2) {
+				System.out.println ( "line 2 is greater than line 1" );
+			} else if (line1 > line2) {
+				System.out.println ( "line 1 is greater than line 2 " );
+			} else {
+				System.out.println ( "Both lines are equals" );
+			}
+		}
+
 }
-
-
+		
+		
+			
